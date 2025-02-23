@@ -7,7 +7,6 @@ import { compose } from 'redux';
 import { IntlProps } from '../../';
 import { kycSteps } from '../../api';
 import { CrossIcon } from '../../assets/images/kyc/CrossIcon';
-import { LogoIcon } from '../../assets/images/LogoIcon';
 import { Address, Documents, Identity, Phone } from '../../containers';
 import { getVerificationStep, setDocumentTitle } from '../../helpers';
 import {
@@ -68,8 +67,8 @@ class ConfirmComponent extends React.Component<Props> {
 
         return (
             <div className="pg-container pg-confirm">
-                <div className="pg-confirm__logo">
-                    <LogoIcon />
+                <div>
+                <img src="/logo.png" alt="Logo" width="140" height="50" />
                 </div>
                 <h3 className="pg-confirm__title">
                     <FormattedMessage id={`page.confirm.title.${step}`} />

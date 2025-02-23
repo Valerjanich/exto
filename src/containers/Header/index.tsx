@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { IntlProps } from '../../';
 import { showLanding } from '../../api';
-import { LogoIcon } from '../../assets/images/LogoIcon';
 import {
     Market,
     RootState,
@@ -73,11 +72,10 @@ class Head extends React.Component<Props> {
                         <span className="pg-sidebar__toggler-item"/>
                         <span className="pg-sidebar__toggler-item"/>
                     </div>
-                    <div onClick={e => this.redirectToLanding()} className="pg-header__logo">
-                        <div className="pg-logo">
-                            <LogoIcon className="pg-logo__img" />
-                        </div>
+                    <div className="pg-header__logo" onClick={e => this.redirectToLanding()}>
+                    <img src="/logo.png" alt="Logo" width="140" height="50" />
                     </div>
+
                     {this.renderMarketToggler()}
                     <div className="pg-header__location">
                         {mobileWallet ? <span>{mobileWallet}</span> : <span>{location.pathname.split('/')[1]}</span>}

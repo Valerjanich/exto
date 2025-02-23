@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Link, RouteProps, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { IntlProps } from '../../';
-import { LogoIcon } from '../../assets/images/LogoIcon';
 import { MarketsTable } from '../../containers';
 import { toggleColorTheme } from '../../helpers';
 import {
@@ -20,14 +19,14 @@ const FeaturesSecurityIcon = require('../../assets/images/landing/features/Secur
 const FeaturesCommunityIcon = require('../../assets/images/landing/features/Community.svg');
 const FeaturesAPIIcon = require('../../assets/images/landing/features/API.svg');
 
-const TelegramIcon = require('../../assets/images/landing/social/Telegram.svg');
-const LinkedInIcon = require('../../assets/images/landing/social/LinkedIn.svg');
-const TwitterIcon = require('../../assets/images/landing/social/Twitter.svg');
-const YouTubeIcon = require('../../assets/images/landing/social/YouTube.svg');
-const RedditIcon = require('../../assets/images/landing/social/Reddit.svg');
-const FacebookIcon = require('../../assets/images/landing/social/Facebook.svg');
-const MediumIcon = require('../../assets/images/landing/social/Medium.svg');
-const CoinMarketIcon = require('../../assets/images/landing/social/CoinMarket.svg');
+//const TelegramIcon = require('../../assets/images/landing/social/Telegram.svg');
+//const LinkedInIcon = require('../../assets/images/landing/social/LinkedIn.svg');
+//const TwitterIcon = require('../../assets/images/landing/social/Twitter.svg');
+//const YouTubeIcon = require('../../assets/images/landing/social/YouTube.svg');
+//const RedditIcon = require('../../assets/images/landing/social/Reddit.svg');
+//const FacebookIcon = require('../../assets/images/landing/social/Facebook.svg');
+//const MediumIcon = require('../../assets/images/landing/social/Medium.svg');
+//const CoinMarketIcon = require('../../assets/images/landing/social/CoinMarket.svg');
 
 
 interface ReduxProps {
@@ -62,7 +61,7 @@ class Landing extends React.Component<Props> {
                 <div className="pg-landing-screen__header">
                     <div className="pg-landing-screen__header__wrap">
                         <div className="pg-landing-screen__header__wrap__left" onClick={e => this.handleScrollTop()}>
-                            <LogoIcon />
+                        <img src="/logo.png" alt="Logo" width="140" height="50" />
                         </div>
                         <div className="pg-landing-screen__header__wrap__right">
                             <Link to="/profile" className="landing-button">
@@ -78,7 +77,7 @@ class Landing extends React.Component<Props> {
             <div className="pg-landing-screen__header">
                 <div className="pg-landing-screen__header__wrap">
                     <div className="pg-landing-screen__header__wrap__left" onClick={e => this.handleScrollTop()}>
-                        <LogoIcon />
+                    <img src="/logo.png" alt="Logo" width="140" height="50" />
                     </div>
                     <div className="pg-landing-screen__header__wrap__right">
                         <Link to="/signin" className="landing-button landing-button--simple">
@@ -109,7 +108,7 @@ class Landing extends React.Component<Props> {
             </div>
         );
     }
-
+/*
     public renderPlatformInfoBlock() {
         return (
             <div className="pg-landing-screen__platform-info">
@@ -130,7 +129,7 @@ class Landing extends React.Component<Props> {
             </div>
         );
     }
-
+*/
     public renderRegisterBlock() {
         return (
             <div className="pg-landing-screen__register">
@@ -255,7 +254,7 @@ class Landing extends React.Component<Props> {
             <div className="pg-landing-screen__footer">
                 <div className="pg-landing-screen__footer__wrap">
                     <div className="pg-landing-screen__footer__wrap__left" onClick={e => this.handleScrollTop()}>
-                        <LogoIcon />
+                    <img src="/logo.png" alt="Logo" width="140" height="50" />
                     </div>
                     <div className="pg-landing-screen__footer__wrap__navigation">
                         <div className="pg-landing-screen__footer__wrap__navigation__col">
@@ -276,16 +275,20 @@ class Landing extends React.Component<Props> {
                     </div>
                     <div className="pg-landing-screen__footer__wrap__social">
                         <div className="pg-landing-screen__footer__wrap__social__row">
+                            {/*
                             <img src={TelegramIcon} alt="Telegram" />
                             <img src={LinkedInIcon} alt="LinkedIn" />
                             <img src={TwitterIcon} alt="Twitter" />
                             <img src={YouTubeIcon} alt="YouTube" />
+                            */}
                         </div>
                         <div className="pg-landing-screen__footer__wrap__social__row">
+                            {/*
                             <img src={RedditIcon} alt="Reddit" />
                             <img src={FacebookIcon} alt="Facebook" />
                             <img src={MediumIcon} alt="MediumIcon" />
                             <img src={CoinMarketIcon} alt="CoinMarket" />
+                            */}
                         </div>
                     </div>
                 </div>
@@ -299,9 +302,9 @@ class Landing extends React.Component<Props> {
             <div className="pg-landing-screen">
                 {this.renderHeader()}
                 {this.renderMarketInfoBlock()}
-                {this.renderPlatformInfoBlock()}
-                {this.renderRegisterBlock()}
-                {this.renderFeaturesBlock()}
+             {/*   {this.renderPlatformInfoBlock()} 
+                {this.renderRegisterBlock()} 
+                {this.renderFeaturesBlock()} */}
                 {this.renderTradeOnTheGoBlock()}
                 {this.renderStartTradingBlock()}
                 {this.renderFooter()}

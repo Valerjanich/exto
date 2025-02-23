@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { LogoIcon } from '../../../assets/images/LogoIcon';
+import { LogoIcon } from '../../../assets/images/old_LogoIcon';
 import { ProfileIcon } from '../../../assets/images/sidebar/ProfileIcon';
 import { selectUserLoggedIn } from '../../../modules';
 
